@@ -8,3 +8,5 @@ An awesome admin template for ProcessWire 2.2.
 ---
 
 Created in 2012 by Nico Knoll
+
+Modified in 2013 by James Homer

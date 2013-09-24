@@ -1,30 +1,36 @@
-@import url(reset.css); 
+@import url(reset.css);
 @import url(JqueryUI/JqueryUI.css);
 
 	* {
-		margin:0 auto;
+		margin: 0;
 	}
-	
+
 	html, body {
 		height:100%;
 		font-family:'Open Sans', arial, sans-serif;
 	}
-	
+
+	.sidr {
+		-webkit-box-shadow: inset -5px 0 10px 0 #222 !important;
+		-moz-box-shadow: inset -5px 0 10px 0 #222 !important;
+		box-shadow: inset -5px 0 10px 0 #222 !important;
+	}
+
 	#wrapper {
 		width:100%;
-		box-sizing:border-box;-o-box-sizing:border-box;-ms-box-sizing:border-box;-moz-box-sizing:border-box;-khtml-box-sizing:border-box;-webkit-box-sizing:border-box;
 		height:100%;
-		padding-left:200px;		
+		box-sizing:border-box;-o-box-sizing:border-box;-ms-box-sizing:border-box;-moz-box-sizing:border-box;-khtml-box-sizing:border-box;-webkit-box-sizing:border-box;
+		padding-top:32px;
 	}
 
 	body.modal #wrapper {
 		padding-left: 0px;
 		padding-bottom: 0px;
 	}
-	
+
 	.ui-dialog-titlebar {
 		background:#bbb;
-		border-color: #aaa;	
+		border-color: #aaa;
 	}
 
 	.ui-dialog-buttonpane {
@@ -38,62 +44,60 @@
 
 	nav {
 		width:200px;
-		float:left;
+		/*float:left;*/
 		position:relative;
 		height:100%;
 		background:#282d33 url(images/bg_dark.png);
-		margin-left:-200px;
 		box-sizing:border-box;-o-box-sizing:border-box;-ms-box-sizing:border-box;-moz-box-sizing:border-box;-khtml-box-sizing:border-box;-webkit-box-sizing:border-box;
 	}
-	
+
 	#logo {
-		position: relative; 
+		position: relative;
 		width: 200px;
-		height: 60px; 
-		background: url(images/logo.png) center center no-repeat; 
+		height: 60px;
+		background: url(images/logo.png) center center no-repeat;
 		color:transparent;
 		border:0px;
 		display:block;
 	}
-	
+
 	#logo:hover {
-		background: url(images/logo_hover.png) center center no-repeat; 
+		background: url(images/logo_hover.png) center center no-repeat;
 	}
-	
-	
+
+
 	nav ul {
-		width:100%;
-		float:left;
+		width:200px;
+		/*float:left;*/
 		padding:0px;
 		list-style-type:none;
 	}
-	
+
 	nav ul li {
 		width:100%;
 		float:left;
 	}
-	
+
 	nav ul li a {
 		width:100%;
 		float:left;
-		color:#adb9b9;
-		text-shadow:0px 1px 2px rgba(0,0,0,0.4);
+		color:#999 !important;
+		text-shadow:0px 1px 2px rgba(0,0,0,0.75);
 		height:48px;
 		line-height:48px;
 		box-sizing:border-box;-o-box-sizing:border-box;-ms-box-sizing:border-box;-moz-box-sizing:border-box;-khtml-box-sizing:border-box;-webkit-box-sizing:border-box;
 		padding:0px 20px;
 	}
-	
+
 	nav ul li a.on {
-		box-shadow:inset 0px 0px 4px rgba(0,0,0,0.5);
-		background:rgba(0,0,0,0.3);
-		color:#fff;
+		box-shadow:none;
+		color:#fff !important;
 	}
-	
+
 	nav ul li a:hover {
 		color:#fff;
 	}
-	
+
 	nav #user {
 		position:absolute;
 		bottom:0px;
@@ -104,7 +108,7 @@
 		box-sizing:border-box;-o-box-sizing:border-box;-ms-box-sizing:border-box;-moz-box-sizing:border-box;-khtml-box-sizing:border-box;-webkit-box-sizing:border-box;
 		padding:20px;
 	}
-	
+
 	nav #user .avatar {
 		border-radius:50%;
 		box-shadow:inset 0px 0px 5px rgba(0,0,0,0.4);
@@ -116,9 +120,9 @@
 		background:url(https://de.gravatar.com/userimage/7827382/b1a87218f2b60469218b5897844d0e4c.jpeg);
 		background-size:cover;
 	}
-	
-	
-	
+
+
+
 	nav #user a.title {
 		float:left;
 		width:100px;
@@ -127,39 +131,35 @@
 		margin-top:2px;
 		text-shadow:0px 1px 2px rgba(0,0,0,0.4);
 	}
-	
+
 	nav #user a.action {
 		float:left;
 		width:100px;
 		font-size:14px;
 		text-shadow:0px 1px 2px rgba(0,0,0,0.4);
 	}
-	
-	
+
+
 	#main {
 		width:100%;
 		position:relative;
 		height:100%;
-		background:#dbdbdb url(images/bg_main.png);	
+		background:#dbdbdb url(images/bg_main.png);
 		box-shadow:0px 0px 7px rgba(0,0,0,0.6);
 		z-index:10;
 		float:left;
-		padding:60px 20px 20px;
+		padding:20px;
 		overflow:auto;
-		box-sizing:border-box;-o-box-sizing:border-box;-ms-box-sizing:border-box;-moz-box-sizing:border-box;-khtml-box-sizing:border-box;-webkit-box-sizing:border-box;	
+		box-sizing:border-box;-o-box-sizing:border-box;-ms-box-sizing:border-box;-moz-box-sizing:border-box;-khtml-box-sizing:border-box;-webkit-box-sizing:border-box;
 	}
-	
-	
+
+
 /* ---- Breadcrumb ---- */
-	
-	#bcwrapper {
-	    position:relative
-	}
-	
+
 	#breadcrumb {
 		width:100%;
 		position:absolute;
-		background:#ededed url(images/bg_light.png);	
+		background:#ededed url(images/bg_light.png);
 		box-shadow:0px 0px 4px rgba(0,0,0,0.5);
 		z-index:20;
 		float:left;
@@ -170,13 +170,13 @@
 		width:100%;
 		top:0px;
 	}
-	
+
 	#breadcrumb li {
 		padding:0px;
 		float:left;
 		height:32px;
 	}
-	
+
 	#breadcrumb li a {
 		float: left;
 		background: url(images/breadcrumb.png) no-repeat center right;
@@ -188,28 +188,31 @@
 		color: #2F4248;
 		font-size:12px;
 	}
-	
+
 	#breadcrumb li a.on {
 		background: none;
 		font-weight: bold;
 	}
-	
+
 	#breadcrumb li a:hover {
 		text-decoration:underline;
 		color:#000;
 	}
-	
-	
 
-	
-	
-	
+        #breadcrumb li a[href="../?open=1"] {
+            text-transform: capitalize;
+        }
+
+
+
+
+
 	.InputfieldForm {
 		width:100%;
 		box-sizing:border-box;-o-box-sizing:border-box;-ms-box-sizing:border-box;-moz-box-sizing:border-box;-khtml-box-sizing:border-box;-webkit-box-sizing:border-box;
 		float:left;
 	}
-	
+
 	.WireTabs {
 		width:100%;
 		box-sizing:border-box;-o-box-sizing:border-box;-ms-box-sizing:border-box;-moz-box-sizing:border-box;-khtml-box-sizing:border-box;-webkit-box-sizing:border-box;
@@ -218,34 +221,29 @@
 		left:0px !important;
 		box-shadow:0px 1px 3px rgba(0,0,0,0.2);
 	}
-	
+
 	.WireTabs a {
 		color: #407485;
 		font-weight: bold;
 		font-size:12px;
 	}
-	
+
 	.WireTabs a:hover {
 		color: #2F4248;
 	}
-	
-	.WireTabs li a.on {
-		background-color: #EBF4FF;
-		text-decoration:overline;
-	}
-	
+
 	.WireTabs li:first-child {
 		padding-left:5px;
 	}
 
-	
+
 
 
 	#fieldgroupContext {
 		right: 40px !important;
 		top: 30px !important;
 	}
-	
+
 	#fieldgroupContextSelect {
 		margin-left:10px;
 	}
@@ -259,11 +257,11 @@
 	p.description,
 	.PageListID7 .detail {
 		font-style: italic;
-		color: #777; 
+		color: #777;
 		margin-bottom:15px;
 	}
-	
-	
+
+
 
 
 
@@ -279,7 +277,7 @@
 		margin-top: 30px;
 		width: 100%;
 	}
-	
+
 	table.AdminDataList + h2 {
 		margin-top:0px;
 	}
@@ -299,7 +297,7 @@
 		border-top: 1px solid #EEE;
 		margin-bottom: 20px;
 	}
-	
+
 	.AdminDataTable tr td,
 	.AdminDataList tr td,
 	.AdminDataTableSortable tr td,
@@ -309,7 +307,7 @@
 		padding:10px !important;
 		font-size:13px !important;
 	}
-	
+
 	#PageListContainer,
 	.Inputfields .Inputfield:not(.InputfieldSubmit):not(.InputfieldWrapper):not(.InputfieldButton),
 	.InputfieldFile {
@@ -321,11 +319,11 @@
 		float: left;
 		border-top: 1px solid #EEE;
 	}
-	
-	
+
+
 	#PageListContainer {
 		font-size:14px;
-		padding:10px 20px 20px;	
+		padding:10px 20px 20px;
 	}
 
 	.Inputfield .ui-widget-header,
@@ -337,20 +335,20 @@
 		box-sizing:border-box;-o-box-sizing:border-box;-ms-box-sizing:border-box;-moz-box-sizing:border-box;-khtml-box-sizing:border-box;-webkit-box-sizing:border-box;
 		font-size: 13px;
 	}
-	
+
 	.Inputfield .ui-widget-header {
-		padding:10px 12px !important;
+		padding: 0.5em 0.5em 1em 0.5em !important;
 
 	}
-	
+
 	.Inputfield .ui-widget-content {
 		padding-top:0px !important;
 	}
-	
-	
-	ul.Inputfields li input[type="text"], 
-	ul.Inputfields li input[type="number"], 
-	ul.Inputfields li input[type="password"], 
+
+
+	ul.Inputfields li input[type="text"],
+	ul.Inputfields li input[type="number"],
+	ul.Inputfields li input[type="password"],
 	ul.Inputfields li input[type="email"],
 	textarea {
 		float: left;
@@ -362,39 +360,39 @@
 		box-sizing:border-box;-o-box-sizing:border-box;-ms-box-sizing:border-box;-moz-box-sizing:border-box;-khtml-box-sizing:border-box;-webkit-box-sizing:border-box;
 		max-width: 100%;
 	}
-	
+
 	.Inputfield, .Inputfields {
 		float:left;
 		width:100%;
 	}
-	
-	
+
+
 	.InputfieldCheckboxesStacked li, .InputfieldRadiosStacked li {
 		padding:5px 5px 0px 5px;
 	}
-	
+
 	.InputfieldCheckboxesStacked li input, .InputfieldRadiosStacked li input {
 		margin-right:5px;
 	}
-	
-	
+
+
 	.InputfieldFileList {
 	float:left;
-	width:100%;	
+	width:100%;
 	position:relative;
 	}
-	
+
 	.InputfieldFileUpload {
 		float:left;
-		width:100%;	
+		width:100%;
 	}
-	
+
 	.ui-sortable-helper {
 		background:#f6f6f6;
 	}
-	
+
 	/* ---- more ---- */
-	
+
 	#modules_form .description {
 		width:100%;
 		box-sizing:border-box;-o-box-sizing:border-box;-ms-box-sizing:border-box;-moz-box-sizing:border-box;-khtml-box-sizing:border-box;-webkit-box-sizing:border-box;
@@ -426,7 +424,7 @@
 		width:100%;
 		margin:15px -12px 0px;
 	}
-	
+
 	#notices {
 		font-size: 13px;
 		float: left;
@@ -434,19 +432,19 @@
 		background: #fff;
 		box-shadow:0px 1px 3px rgba(0,0,0,0.2);
 	}
-	
+
 	#notices .NoticeMessage {
 		padding: 5px;
 	}
-	
+
 	#notices .NoticeMessage:first-child {
 		margin-top: 10px;
 	}
-	
+
 	#notices .NoticeMessage:last-child {
 		margin-bottom: 10px;
 	}
-	
+
 	#notices .ui-icon {
 		top:0px !important;
 	}
@@ -460,7 +458,7 @@
 		float: left;
 		padding:15px;
 	}
-	
+
 	#main dl.nav dt {
 
 		font-size: 18px;
@@ -473,7 +471,7 @@
 		padding-bottom:15px;
 		border-bottom:1px solid #eee;
 	}
-	
+
 	#main dl.nav dd:last-child {
 		margin-bottom:0px;
 		border-bottom:0px;
@@ -487,8 +485,16 @@ padding: 12px 2px 10px 24px !important;
 background:url(images/page_white.png) center left no-repeat;
 }
 
+.PageList .PageListItem:hover .PageListActions {
+    display: inline;
+}
+
 .PageListID1 {
 	background-image:url(images/house.png);
+}
+
+.PageListID1 > a:first-child {
+    text-transform: capitalize;
 }
 
 .PageListID7 {
@@ -499,16 +505,16 @@ background:url(images/page_white.png) center left no-repeat;
 	a {
 		color:#407485;
 	}
-	
+
 	a:hover {
 		color: #2F4248;
 	}
-	
+
 	table + p {
 		width:100%;float:left;
 	}
-	
-	
+
+
 /* ---- Special ---- */
 
 .InputfieldPageNameURL {
@@ -531,6 +537,47 @@ padding: 1px 8px 1px 8px !important;
 
 .PageList .PageListNumChildren {
 	margin-right:8px;
-	margin-left:8px;
-	color: #B4B4B4;
+        opacity: 0.5;
+}
+
+.InputfieldRepeater .InputfieldFieldset > label {
+    padding-left: 25px !important;
+}
+
+.InputfieldRepeaterTrash {
+    margin-right: 15px !important;
+}
+
+.Inputfields.ui-sortable {
+    position: relative;
+}
+
+.ui-button .ui-button-text {
+    color: #FFF;
+}
+
+.InputfieldImage {
+    width: 50%;
+}
+
+.InputfieldRepeater .InputfieldFieldset {
+    width: 48% !important;
+    margin-right: 2% !important;
+}
+
+.InputfieldRepeater .InputfieldCropImage {
+    box-shadow: none !important;
+}
+
+.InputfieldImage a.InputfieldFileMove {
+    display: inline-block;
+    padding: 0 !important;
+}
+
+.PageListSelectName {
+    padding: 0.25em;
+}
+
+.PageListSelectActions {
+    margin: 1em 0.25em;
 }

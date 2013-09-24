@@ -54,4 +54,6 @@ $(document).ready(function() {
 	jQuery('#content').removeClass('fouc_fix'); 
 
 
-}); 
+        jQuery('#side-menu').sidr();
+
+});
